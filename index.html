@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Cá Nhân</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">Portfolio<span></span></a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">Giới Thiệu</a>
+        <a href="#skills" class="nav-link">Kỹ Năng</a>
+        <a href="#projects" class="nav-link">Dự Án</a>
+        <a href="#contact" class="nav-link">Liên Hệ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Đổi giao diện">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="hamburger" class="btn-icon hamburger" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div class="about-text fade-in">
+          <span class="badge">Xin chào, tôi là Nguyễn Tuấn Đức Mạnh</span>
+          <h1>Lập Trình Viên Web & Software</h1>
+          <p class="description">
+            Tôi là sinh viên ngành CNTT yêu thích việc xây dựng các ứng dụng web và giải quyết bài toán lập trình. Tôi đã tích lũy kiến thức qua các ngôn ngữ từ Frontend (HTML/CSS/JS) đến Backend & Cơ sở dữ liệu (Python, Java, SQL).
+          </p>
+          <div class="about-cta">
+            <a href="#projects" class="btn btn-primary">Xem Dự Án</a>
+            <a href="#contact" class="btn btn-outline">Liên Hệ</a>
+          </div>
+        </div>
+        <div class="about-img fade-in">
+          <div class="img-wrapper">
+            <img src="html css/3. Dự án random/1781592118963_194807920536951589_5683624079562474353_977658c2dd5e0025fc6899c5f8b47790.jpg" alt="Ảnh đại diện" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-alt">
+      <div class="container">
+        <h2 class="section-title fade-in">Kỹ Năng Chuyên Môn</h2>
+        <div class="skills-grid">
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-html5 skill-icon html-color"></i>
+            <h3>HTML5 & CSS3</h3>
+            <p>Xây dựng giao diện Responsive với Flexbox, CSS Grid và chuẩn Semantic HTML.</p>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-square-js skill-icon js-color"></i>
+            <h3>JavaScript</h3>
+            <p>Xử lý tương tác DOM, sự kiện, validate dữ liệu và tương tác giao diện mượt mà.</p>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-python skill-icon python-color"></i>
+            <h3>Python</h3>
+            <p>Lập trình hướng đối tượng, xử lý thuật toán và cấu trúc dữ liệu cơ bản.</p>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-java skill-icon java-color"></i>
+            <h3>Java</h3>
+            <p>Nắm vững tư duy OOP, viết mã nguồn sạch và các bài toán lập trình căn bản.</p>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-database skill-icon sql-color"></i>
+            <h3>SQL & Database</h3>
+            <p>Truy vấn dữ liệu (SELECT, JOIN, GROUP BY) và thiết kế cơ sở dữ liệu quan hệ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Dự Án Cá Nhân</h2>
+        
+        <!-- Filter & Search Controls -->
+        <div class="project-controls fade-in">
+          <input type="text" id="search-input" placeholder="Tìm kiếm dự án theo tên hoặc công nghệ...">
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="HTML/CSS">HTML/CSS</button>
+            <button class="filter-btn" data-filter="JS">JavaScript</button>
+            <button class="filter-btn" data-filter="Python">Python</button>
+            <button class="filter-btn" data-filter="SQL">SQL</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card fade-in" data-tags="HTML/CSS JS SQL" data-title="trang web bán rau củ quả nông sản sạch">
+            <div class="project-img">
+              <i class="fa-solid fa-carrot project-placeholder-icon"></i>
+            </div>
+            <div class="project-content">
+              <div class="tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JS</span>
+                <span class="tag">SQL</span>
+              </div>
+              <h3>Web Bán Rau Củ Quả CleanFood</h3>
+              <p>Website thương mại điện tử giới thiệu và bán thực phẩm sạch, tích hợp giỏ hàng, lọc sản phẩm và lưu trữ danh mục bằng SQL.</p>
+              <a href="#" class="project-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card fade-in" data-tags="Python SQL" data-title="hệ thống quản lý thư viện sinh viên">
+            <div class="project-img">
+              <i class="fa-solid fa-book-bookmark project-placeholder-icon"></i>
+            </div>
+            <div class="project-content">
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+              </div>
+              <h3>Hệ Thống Quản Lý Thư Viện</h3>
+              <p>Ứng dụng quản lý mượn trả sách, tra cứu thông tin độc giả và thống kê số lượng sách tồn kho kết nối CSDL SQL.</p>
+              <a href="#" class="project-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card fade-in" data-tags="HTML/CSS JS" data-title="ứng dụng ghi chú công việc todolist">
+            <div class="project-img">
+              <i class="fa-solid fa-list-check project-placeholder-icon"></i>
+            </div>
+            <div class="project-content">
+              <div class="tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JS</span>
+              </div>
+              <h3>Ứng Dụng Quản Lý Công Việc (ToDo App)</h3>
+              <p>Ứng dụng ghi chú và quản lý mục tiêu hàng ngày, hỗ trợ đánh dấu hoàn thành, xóa và lưu dữ liệu vào LocalStorage.</p>
+              <a href="#" class="project-link">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-alt">
+      <div class="container">
+        <h2 class="section-title fade-in">Liên Hệ Với Tôi</h2>
+        <div class="contact-wrapper fade-in">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Họ và tên *</label>
+              <input type="text" id="name" placeholder="Nhập họ và tên của bạn">
+              <small class="error-msg" id="name-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" placeholder="example@domain.com">
+              <small class="error-msg" id="email-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Lời nhắn *</label>
+              <textarea id="message" rows="5" maxlength="300" placeholder="Nhập nội dung tin nhắn (tối đa 300 ký tự)..."></textarea>
+              <div class="char-counter">
+                <small class="error-msg" id="message-error"></small>
+                <span id="char-count">0/300</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Gửi Tin Nhắn</button>
+            <div id="form-success" class="success-msg"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; <span id="current-year"></span> Nguyễn Tuấn Đức Mạnh. Tất cả quyền được bảo lưu.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
